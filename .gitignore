@@ -23,4 +23,7 @@
 # dependencies
 /node_modules
 
+.env
+.env.local
+
 NOREADME.md
