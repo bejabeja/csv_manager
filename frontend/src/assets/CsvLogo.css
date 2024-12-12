@@ -1,0 +1,11 @@
+.csv-logo {
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.csv-logo.clickable {
+    cursor: pointer;
+}
+
+.csv-logo.clickable:hover {
+    transform: scale(1.1);
+}

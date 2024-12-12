@@ -1,0 +1,11 @@
+id, nombre, edad, departamento, email
+1, Mimi Pérez, 35, Ventas, juan@example.com
+2, María García, 28, Marketing, maria@example.com
+3, Carles López, 42, Finanzas, carlos@example.com
+4, Laura Martínez, 31, Recursos Humanos, laura@example.com
+5, Alejandro Rodríguez, 39, Producción, alejandro@example.com
+6, Ana Sánchez, 45, Ventas, ana@example.com
+7, David Gómez, 33, Marketing, david@example.com
+8, Sofía Hernández, 29, Finanzas, sofia@example.com
+9, Pablo Díaz, 37, Recursos Humanos, pablo@example.com
+10, Andrea Fernández, 34, Producción, andrea@example.com
