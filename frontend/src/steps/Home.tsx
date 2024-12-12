@@ -3,7 +3,6 @@ import { Toaster, toast } from "sonner";
 import CsvLogo from "../assets/CsvLogo";
 import Button from "../components/Button";
 import CsvInput from "../components/CsvInput";
-import { testData } from "../services/test";
 import { uploadFile } from "../services/upload";
 import { type Data, type Pagination } from "../types";
 import { Search } from "./Search";
@@ -29,8 +28,6 @@ export const Home = () => {
   const [pagination, setPagination] = useState<Pagination | null>(null);
   const [file, setFile] = useState<File | null>(null);
 
-  const [helloResponse, setHelloResponse] = useState<string | null>(null);
-
   const handleInputFetch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const [file] = event.target.files ?? [];
     if (file) {
@@ -44,7 +41,6 @@ export const Home = () => {
     setData([]);
     setPagination(null);
     setFile(null);
-    setHelloResponse(null);
   };
 
   const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
@@ -66,17 +62,6 @@ export const Home = () => {
       setData(newData);
       setPagination(newPagination || null);
       toast.success("File uploaded successfully");
-    }
-  };
-
-  const handleHelloClick = async () => {
-    try {
-      const response = await testData();
-      setHelloResponse(JSON.stringify(response, null, 2));
-      toast.success("Hello endpoint called successfully!");
-    } catch (error) {
-      console.error(error);
-      toast.error("Error calling hello endpoint");
     }
   };
 
@@ -105,11 +90,6 @@ export const Home = () => {
               </Button>
             )}
           </form>
-          <button onClick={handleHelloClick}>Call Hello Endpoint</button>
-
-          {helloResponse && (
-            <pre className="hello-response">{helloResponse}</pre>
-          )}
         </>
       )}
 
